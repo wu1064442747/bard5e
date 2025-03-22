@@ -1,0 +1,321 @@
+/* 全局样式 */
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* 导航栏样式 */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+/* 卡片样式 */
+.card {
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* 详细内容样式 */
+.college-details,
+.spell-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.college-details h6,
+.spell-details h6 {
+    color: #6c5ce7;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.college-details ul,
+.spell-details ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.college-details li,
+.spell-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.college-details li:before,
+.spell-details li:before {
+    content: "•";
+    color: #6c5ce7;
+    position: absolute;
+    left: 0;
+}
+
+/* 章节标题样式 */
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+    position: relative;
+}
+
+section h2:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #6c5ce7;
+}
+
+/* 英雄区域样式 */
+.jumbotron {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a8a4e6 100%);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.jumbotron h1 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .college-details,
+    .spell-details {
+        font-size: 0.9rem;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+/* 链接样式 */
+a {
+    color: #6c5ce7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a8a4e6;
+    text-decoration: none;
+}
+
+/* 按钮样式 */
+.btn-primary {
+    background-color: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+.btn-primary:hover {
+    background-color: #a8a4e6;
+    border-color: #a8a4e6;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 角色构建工具样式 */
+.attribute-builder,
+.skill-builder {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.attribute-item,
+.skill-item {
+    transition: all 0.3s ease;
+}
+
+.attribute-item:hover,
+.skill-item:hover {
+    transform: translateX(5px);
+}
+
+.attribute-item label,
+.skill-item label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.attribute-item input[type="number"] {
+    text-align: center;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+.attribute-item button,
+.skill-item button {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.attribute-item button:hover:not(:disabled),
+.skill-item button:hover:not(:disabled) {
+    background-color: #6c5ce7;
+    color: white;
+    border-color: #6c5ce7;
+}
+
+.attribute-item button:disabled,
+.skill-item button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.skills-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.skills-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skills-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.skills-list::-webkit-scrollbar-thumb {
+    background: #6c5ce7;
+    border-radius: 3px;
+}
+
+.skills-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a4e6;
+}
+
+.form-check-input:checked {
+    background-color: #6c5ce7;
+    border-color: #6c5ce7;
+}
+
+.form-check-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form-check-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-check-label:before {
+    content: attr(data-ability);
+    font-size: 0.8rem;
+    color: #6c5ce7;
+    margin-right: 0.5rem;
+}
+
+/* 保存按钮样式 */
+.btn-save {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a8a4e6 100%);
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .attribute-builder,
+    .skill-builder {
+        padding: 0.5rem;
+    }
+    
+    .skills-list {
+        max-height: 300px;
+    }
+    
+    .attribute-item input[type="number"] {
+        width: 4rem;
+    }
+} 
